@@ -1,0 +1,18 @@
+{
+  "name": "gymflow-crm",
+  "version": "1.0.0",
+  "description": "GymFlow CRM - A premium fitness club management Single Page Application (SPA).",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 3000 -c-1",
+    "start": "npx -y http-server -p 3000 -c-1"
+  },
+  "keywords": [
+    "gym",
+    "crm",
+    "fitness",
+    "vanilla-js"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymFlow CRM - Premium Fitness Club Management</title>
+  <meta name="description" content="Manage memberships, trainer assignments, attendance check-ins, payment renewals, and custom workouts or diet plans for members.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar-nav-container">
+      <div class="logo-container">
+        <div class="logo-icon">⚡</div>
+        <div class="logo-text">GymFlow CRM</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#dashboard" class="nav-item active" data-view="dashboard">
+          <span>📊</span> Dashboard
+        </a>
+        <a href="#members" class="nav-item" data-view="members">
+          <span>👥</span> Members Directory
+        </a>
+        <a href="#payments" class="nav-item" data-view="payments">
+          <span>💳</span> Renewals & Billing
+        </a>
+        <a href="#trainers" class="nav-item" data-view="trainers">
+          <span>🏋️‍♂️</span> Trainers & Staff
+        </a>
+        <a href="#plans" class="nav-item" data-view="plans">
+          <span>📋</span> Workout & Diets
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="theme-toggle-container">
+          <span>Light Mode</span>
+          <label class="switch">
+            <input type="checkbox" id="theme-checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div style="font-size: 11px; color: var(--text-muted); text-align: center;">
+          GymFlow CRM v1.0.0
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Pane -->
+    <main class="main-content">
+      
+      <!-- Top Title Bar -->
+      <header class="top-bar">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <!-- Mobile Menu Burger toggle -->
+          <button class="menu-toggle" id="mobile-menu-burger" aria-label="Toggle menu">☰</button>
+          
+          <div class="view-title">
+            <h1 id="view-title-text">Dashboard</h1>
+            <p id="view-subtitle-text">Gym overview and quick check-in.</p>
+          </div>
+        </div>
+
+        <div class="top-bar-actions">
+          <div style="font-size: 13px; color: var(--text-secondary); text-align: right; display: flex; flex-direction: column;">
+            <strong style="color: var(--text-primary);" id="live-calendar-date">May 23, 2026</strong>
+            <span>Active Session</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Rendering Window -->
+      <section id="main-view-window" style="display: flex; flex-direction: column; gap: 32px; flex-grow: 1;">
+        <!-- Javascript dynamically renders contents here -->
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- ==========================================================================
+       Global Glassmorphic Modals
+       ========================================================================== -->
+  
+  <!-- Primary/Global Modal Backdrop -->
+  <div class="modal-backdrop" id="global-modal" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Modal Title</h3>
+        <button class="modal-close" data-modal="global-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Body injected here -->
+      </div>
+      <div class="modal-footer">
+        <!-- Footer buttons injected here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Sub Modal Backdrop (For overlapping assignments e.g. Assign plans inside Member profile) -->
+  <div class="modal-backdrop" id="sub-modal" role="dialog" aria-modal="true" style="z-index: 1100;">
+    <div class="modal-container" style="max-width: 440px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Sub Modal Title</h3>
+        <button class="modal-close" data-modal="sub-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Sub-body injected here -->
+      </div>
+      <div class="modal-footer">
+        <!-- Sub-footer buttons injected here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Javascript Modules Application entry -->
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
